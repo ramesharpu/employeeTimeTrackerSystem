@@ -56,9 +56,9 @@
 			<td>
 				<!--  <label id="Label1"><h2 class="style7">&nbsp;</h2></label>-->
 				<form method="post" action="Login">
-
 					<table style="width: 32%" align="center">
 						<tr>
+
 							<td class="style8" colspan="2"><label id="Label3"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										Employee Login<br />
 								</strong></label></td>
@@ -67,6 +67,16 @@
 							<td class="style9" colspan="2">&nbsp;</td>
 						</tr>
 						<tr>
+							<center>
+								<font size="5" color="red"> <b><i> <%
+												if ( request.getAttribute("message")!=null)
+													out.println(request.getAttribute("message"));
+												else
+													out.println(" ");
+											%>
+									</i></b></font>
+							</center>
+
 
 							<td class="style3" style="width: 95px"><label id="Label4">
 									<strong>Username</strong>
