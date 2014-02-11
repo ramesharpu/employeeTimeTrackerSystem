@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -40,13 +41,9 @@ public class Login extends HttpServlet {
 			String query = " ";
 			if (user_id.equals("")||password.equals(""))
 			{
-				System.out.println("Entered null loop");
-				System.out.println("failure");
 				message = "Oops!!! Invalid Credentials";
 				request.setAttribute("message", message);
-//				response.sendRedirect("/main.jsp");
-				request.getRequestDispatcher("/index.jsp").forward(request,
-						response);
+				request.getRequestDispatcher("/index.jsp").forward(request, response);
 			}
 			else
 			{
@@ -61,15 +58,13 @@ public class Login extends HttpServlet {
 					{
 						db_userid =rs.getString("user_id");
 						db_password =rs.getString("password");
-						System.out.println("UserID: "+db_userid+" Password: "+db_password);
-
 					}
 					con.close();
 					System.out.println("password validation");
 					if(password.equals(db_password))
 					{
-						System.out.println("redirecting to main.jsp");
-						response.sendRedirect("/main.jsp");
+						HttpSession session = request.getSession(true);
+						response.sendRedirect("pages/main.jsp");
 //						request.getRequestDispatcher("/main.jsp");
 					}
 					else
