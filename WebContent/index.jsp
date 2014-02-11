@@ -46,7 +46,7 @@
 </style>
 </head>
 
-<body style="background-image: url('background.jpg'); width: 100%">
+<body style="background-image: url('images/background.jpg'); width: 100%">
 
 	<table style="width: 100%; height: 532px" class="style1">
 		<tr>
