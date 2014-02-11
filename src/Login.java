@@ -34,7 +34,6 @@ public class Login extends HttpServlet {
 		{
 			String user_id = request.getParameter("user_name").trim();
 			String password = request.getParameter("password").trim();
-			System.out.println(user_id +" "+password );
 			String db_userid = "";
 			String db_password="";
 			String message = " ";

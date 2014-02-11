@@ -1,14 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%
+	response.setHeader("cache-control", "no-cache");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
 <head>
 <meta http-equiv="Content-Language" content="en-us" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Employee Time Tracker System</title>
+<script language="javascript" type="text/javascript">
+    window.history.forward();
+</script> 
 <style type="text/css">
 .style1 {
 	border-collapse: collapse;
@@ -46,7 +52,8 @@
 </style>
 </head>
 
-<body style="background-image: url('media/images/background.jpg'); width: 100%">
+<body
+	style="background-image: url('media/images/background.jpg'); width: 100%">
 
 	<table style="width: 100%; height: 532px" class="style1">
 		<tr>
@@ -69,11 +76,11 @@
 						<tr>
 							<center>
 								<font size="5" color="red"> <b><i> <%
-												if ( request.getAttribute("message")!=null)
-													out.println(request.getAttribute("message"));
-												else
-													out.println(" ");
-											%>
+ 	if (request.getAttribute("message") != null)
+ 		out.println(request.getAttribute("message"));
+ 	else
+ 		out.println(" ");
+ %>
 									</i></b></font>
 							</center>
 
