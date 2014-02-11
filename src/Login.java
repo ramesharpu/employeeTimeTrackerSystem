@@ -14,6 +14,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+
 /**
  * Servlet implementation class Login
  */
@@ -49,27 +50,23 @@ public class Login extends HttpServlet {
 				try
 				{
 					Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			        Connection con=DriverManager.getConnection("jdbc:sqlserver://RAMESH-PC\\SQLSERVER;databaseName=db_emp_timetracker","sa","Tiger123$");//repalce your databse name and user name
+			        Connection con=DriverManager.getConnection("jdbc:sqlserver://RAMESH-PC\\SQLSERVER;databaseName=db_emp_timetracker","sa","Tiger123$");
 			        Statement st=con.createStatement();
 			        query = "Select * from tb_user where user_id='"+user_id+"'";
-			        ResultSet rs=st.executeQuery(query);//replace your table name
+			        ResultSet rs=st.executeQuery(query);
 					while(rs.next())
 					{
 						db_userid =rs.getString("user_id");
 						db_password =rs.getString("password");
 					}
 					con.close();
-					System.out.println("password validation");
 					if(password.equals(db_password))
 					{
 						HttpSession session = request.getSession(true);
 						response.sendRedirect("pages/main.jsp");
-//						request.getRequestDispatcher("/main.jsp");
 					}
 					else
 					{
-						System.out.println("entered else loop");
-						System.out.println("failure");
 						message = "Oops!!! Invalid Credentials";
 						request.setAttribute("message", message);
 						request.getRequestDispatcher("/index.jsp").forward(request,
@@ -78,7 +75,6 @@ public class Login extends HttpServlet {
 				}
 				catch (Exception e) 
 				{
-					// handle the exception
 					e.printStackTrace();
 					System.err.println(e.getMessage());
 				}
