@@ -15,7 +15,7 @@
 	<li>Time Sheet Management
 			<div>
 				<div class="column">
-					<b>Manage User Data</b>
+					<b>User Time Entries</b>
 					<div>
 						<a href="TimeSheet.jsp">Time Sheet</a>
 					</div>
