@@ -27,7 +27,7 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		 boolean Result = false;
-		    if(request.getSession(false) != null)
+		    if(request.getSession(true) != null)
 		    {    
 		        request.getSession().invalidate();
 		        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.

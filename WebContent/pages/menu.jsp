@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%String name = (String) session.getAttribute("name");out.println(name);%>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport"
@@ -9,6 +11,8 @@
 <script src="../media/css/menu.js" type="text/javascript"></script>
 </head>
 <body style="padding: 0px 0px;">
+<%String role = (String) session.getAttribute("name");
+if(name.equals("admin")){ %>
 	<nav id="menu">
 	<div class="menu-icon"></div>
 	<ul>
@@ -53,5 +57,33 @@
 		</li>
 	</ul>
 	</nav>
+	<%}else{%>
+	<nav id="menu">
+	<div class="menu-icon"></div>
+	<ul>
+	<li>Time Sheet Management
+			<div>
+				<div class="column">
+					<b>User Time Entries</b>
+					<div>
+						<a href="TimeSheet.jsp">Time Sheet</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>User Management
+			<div>
+				<div class="column">
+					<b>Manage User Data</b>
+					<div>
+						<a href="EditUser.jsp">Edit User Data</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	</nav>
+	<%} %>
+	
 </body>
 </html>
