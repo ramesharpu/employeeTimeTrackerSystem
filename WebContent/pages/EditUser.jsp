@@ -4,12 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
 <link href="../media/css/style.css" rel="stylesheet" type="text/css" />
-<script src="../media/css/menu.js" type="text/javascript"></script>
+<!-- <script src="../media/css/menu.js" type="text/javascript"></script> -->
 </head>
 <body>
+	<p>
+		<br />
+	</p>
 <div class="formDiv" >
-	<form method="post" action="AddNewUser">
+	<form method="post" action="EditUser">
 		<table style="width: 100%">
 			<tr>
 				<td style="width: 77px">&nbsp;</td>
@@ -52,11 +56,8 @@
 								<td colspan="2"><input class="textBoxStyle" name="dob" type="text" placeholder="Date of Birth" tabindex="8" /></td>
 							</tr>
 							<tr>
-								<td style="width: 119px">Gender</td>
-								<td colspan="2"><select name="Select1" class="dropDown" tabindex="9">
-										<option selected="selected" value="Select">Select</option>
-										<option>Male</option>
-										<option>Female</option></select></td>
+								<td style="width: 119px">Active</td>
+								
 							</tr>
 							<tr>
 								<td style="width: 119px; height: 14px;" class="style3"></td>

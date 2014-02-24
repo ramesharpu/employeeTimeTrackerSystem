@@ -1,12 +1,84 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%String name = (String) session.getAttribute("name");out.println(name);%>
-
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1; charset=ISO-8859-1" />
+    <link type="text/css" href="../media/css/menu.css" rel="stylesheet" />
+    
+	<script type="text/javascript" src="../media/css/jquery.js"></script>
+    
+	<script type="text/javascript" src="../media/css/menu.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+* { margin:0;
+    padding:0;
+}
+body {  }
+#menu {
+    top:30px;
+    margin:0 auto;
+    width:80%;
+}
+</style>
+
+<div id="menu">
+    <ul class="menu">
+        <li><a href="#" class="parent"><span>Time Sheet Management</span></a>
+            <div><ul>
+                <li><a href="TimeSheet.jsp"><span>Time Sheet</span></a></li>
+            </ul></div>
+        </li>
+        <li><a href="#" class="parent"><span>User Management</span></a>
+            <div class="columns two">
+                <ul class="one">
+                    <li><a href="AddUser.jsp"><span>Add New User</span></a></li>
+                </ul>
+                <ul class="two">
+                    <li><a href="EditUser.jsp"><span>Edit User Data</span></a></li>
+                </ul>
+            </div>
+        </li>
+		<li><a href="#" class="parent"><span>Project Management</span></a>
+            <div class="columns two">
+                <ul class="one">
+                    <li><a href="AddProject.jsp"><span>Add New Project</span></a></li>
+                </ul>
+                <ul class="two">
+                    <li><a href="EditProject.jsp"><span>Edit Existing Project</span></a></li>
+                </ul>
+            </div>
+        </li>
+		<li><a href="#" class="parent"><span>Project Management Tools</span></a>
+            <div class="columns two">
+                <ul class="one">
+                    <li><a href="Reports.jsp"><span>Reports</span></a></li>
+                </ul>
+                <ul class="two">
+                    <li><a href="BudgetEvaluator.jsp"><span>Budget Evaluator</span></a></li>
+                </ul>
+            </div>
+        </li>
+		<li><form action="../Logout" method="post"><a href="#"><span>Logout</span></a></form></li>
+      </ul>
+</div>
+	<p>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		
+	</p>
+</body>
+</html>
+<%-- <!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1; charset=ISO-8859-1" /> -->
 <link href="../media/css/menu.css" rel="stylesheet" type="text/css" />
 <script src="../media/css/menu.js" type="text/javascript"></script>
 </head>
@@ -86,4 +158,4 @@ if(name.equals("admin")){ %>
 	<%} %>
 	
 </body>
-</html>
+</html> --%>
