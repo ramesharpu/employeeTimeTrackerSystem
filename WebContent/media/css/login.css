@@ -1,0 +1,33 @@
+.style1 {
+	border-collapse: collapse;
+}
+
+#footer {
+	position: absolute; /* Operas 5 + 6, need this to be relative */
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5em;
+}
+
+.style3 {
+	text-align: right;
+}
+
+.style4 {
+	text-align: left;
+}
+
+.style7 {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.style8 {
+	text-align: left;
+	font-size: large;
+}
+
+.style9 {
+	text-align: center;
+}

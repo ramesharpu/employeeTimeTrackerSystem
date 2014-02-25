@@ -62,7 +62,7 @@ public class Login extends HttpServlet {
 					con.close();
 					if(password.equals(db_password))
 					{
-						HttpSession session = request.getSession(true);
+						HttpSession session = request.getSession(false);
 						session.setAttribute("name", "admin");
 						response.sendRedirect("pages/main.jsp");
 					}

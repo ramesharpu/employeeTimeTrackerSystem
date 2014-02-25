@@ -9,13 +9,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Language" content="en-us" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="media/css/general.css" rel="stylesheet" />
 <title>Employee Time Tracker System</title>
 <script language="javascript" type="text/javascript">
-	window.history.forward();
+    window.history.forward();
 </script>
-<link type="text/css" href="media/css/login.css" rel="stylesheet" />
+<style type="text/css">
+.style1 {
+	border-collapse: collapse;
+}
+
+#footer {
+	position: absolute; /* Operas 5 + 6, need this to be relative */
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5em;
+}
+
+.style3 {
+	text-align: right;
+}
+
+.style4 {
+	text-align: left;
+}
+
+.style7 {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.style8 {
+	text-align: left;
+	font-size: large;
+}
+
+.style9 {
+	text-align: center;
+}
+</style>
 </head>
 
 <body
@@ -42,10 +75,10 @@
 						<tr>
 							<center>
 								<font size="5" color="red"> <b><i> <%
- 	if (request.getAttribute("message") != null)
- 		out.println(request.getAttribute("message"));
- 	else
- 		out.println(" ");
+								 	if (request.getAttribute("message") != null)
+								 		out.println(request.getAttribute("message"));
+								 	else
+								 		out.println(" ");
  %>
 									</i></b></font>
 							</center>
@@ -54,7 +87,7 @@
 							<td class="style3" style="width: 95px"><label id="Label4">
 									<strong>Username</strong>
 							</label>&nbsp;</td>
-							<td class="style4"><input name="user_name" type="text" /></td>
+							<td class="Style"><input name="user_name" type="text" /></td>
 						</tr>
 						<tr>
 							<td class="style3" style="width: 95px"><label id="Label5">
@@ -68,8 +101,7 @@
 						</tr>
 						<tr>
 							<td class="style3" style="width: 95px">&nbsp;&nbsp;</td>
-							<td class="style4">&nbsp; <input name="submit" type="submit"
-								value="Login" /> <input name="reset" type="reset" value="Reset" /><br />
+							<td class="button">&nbsp; <a href="@Login">Login</a> <input name="reset" type="reset" value="Reset" /><br />
 							</td>
 						</tr>
 					</table>

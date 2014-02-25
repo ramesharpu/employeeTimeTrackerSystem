@@ -6,7 +6,6 @@
 <title>Employee Time Tracker</title>
 </head>
 <body background=#1E90FF>
-<%-- <%@ include file ="logout.jsp" %> --%>
 <%@ include file ="menu.jsp" %>
 </body>
 </html>
