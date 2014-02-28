@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%String name = (String) session.getAttribute("name");out.println(name);%>
+<%-- <%String name = (String) session.getAttribute("name");out.println(name);%> --%>
 <html>
 <head>
 <link type="text/css" href="../media/css/menu.css" rel="stylesheet" />
@@ -19,7 +19,7 @@ body {
 #menu {
 	top: 30px;
 	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 }
 </style>
 </head>
