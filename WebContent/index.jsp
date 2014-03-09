@@ -27,7 +27,6 @@
 		</tr>
 		<tr>
 			<td>
-				<!--  <label id="Label1"><h2 class="style7">&nbsp;</h2></label>-->
 				<form method="post" action="Login">
 					<table style="width: 32%" align="center">
 						<tr>

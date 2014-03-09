@@ -6,7 +6,7 @@
 <head>
 <script type="text/javascript" charset="utf-8" src="../media/css/DataTables/media/js/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="../media/css/DataTables/media/js/jquery.dataTables.js"></script>
- <script src="../media/css/jquery-ui/ui/jquery-ui.js"></script>
+<script src="../media/css/jquery-ui/ui/jquery-ui.js"></script>
 <script type="text/javascript" src="../media/css/timeSheet.js"></script>
 <style type="text/css" title="currentStyle">
 @import "../media/css/DataTables/media/css/demo_table.css";
@@ -27,7 +27,7 @@
 			<td><a href="javascript:void(0)" id="delete">Delete selected row</a>
 			</td>
 			<td>
-				&nbsp;&nbsp;<input type="button" value="Delete Row" onclick="'#delete'">
+				&nbsp;&nbsp;<input type="button" value="Delete Row" onclick="javascript:void(0)" >
 			<td>
 			</tr>
 			<tr>

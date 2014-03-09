@@ -5,7 +5,8 @@
 <html>
 <head>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
-<link href="../media/css/style.css" rel="stylesheet" type="text/css" />
+<!-- <link href="../media/css/style.css" rel="stylesheet" type="text/css" /> -->
+<link href="/employeeTimeTrackerSystem/media/css/style.css" rel="stylesheet" type="text/css" />
 <!-- <script src="../media/css/menu.js" type="text/javascript"></script> -->
 </head>
 <body>
@@ -57,6 +58,7 @@
 							</tr>
 							<tr>
 								<td style="width: 119px">Active</td>
+								<td><input type="checkbox" name="active" value="active" checked><br></td>
 								
 							</tr>
 							<tr>
