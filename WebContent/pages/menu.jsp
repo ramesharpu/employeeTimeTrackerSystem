@@ -1,17 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-		
 <%-- <%String name = (String) session.getAttribute("name");out.println(name);%> --%>
 <html>
 <head>
-<c:set var="context" value="${pageContext.request.contextPath}" />
 <link type="text/css" href="/employeeTimeTrackerSystem/media/css/menu.css" rel="stylesheet" />
 <script type="text/javascript" src="/employeeTimeTrackerSystem/media/css/jquery.js"></script>
 <script type="text/javascript" src="/employeeTimeTrackerSystem/media/css/menu.js"></script>
-<!-- <link type="text/css" href="media/css/menu.css" rel="stylesheet" />
-<script type="text/javascript" src="media/css/jquery.js"></script>
-<script type="text/javascript" src="media/css/menu.js"></script> -->
 <style type="text/css">
 * {
 	margin: 0;

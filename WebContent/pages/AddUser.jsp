@@ -1,18 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="main.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-<%-- <c:set var="context" value="${pageContext.request.contextPath}" /> --%>
 <link href="/employeeTimeTrackerSystem/media/css/style.css" rel="stylesheet" type="text/css" />
 <script src="/employeeTimeTrackerSystem/media/css/menu.js" type="text/javascript"></script>
 <script src="/employeeTimeTrackerSystem/media/css/formValidation.js" type="text/javascript"></script>
-<!-- <link href="media/css/style.css" rel="stylesheet" type="text/css" />
-<script src="media/css/menu.js" type="text/javascript"></script>
-<script src="media/css/formValidation.js" type="text/javascript"></script>
- -->
 </head>
 <body>
 	<div class="formDiv">

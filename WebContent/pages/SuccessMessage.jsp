@@ -5,12 +5,19 @@
 <head>
 </head>
 <body>
-<font size="5"> <b><i> <%
- 	if (request.getAttribute("message") != null)
- 		out.println(request.getAttribute("message"));
- 	else
- 		out.println(" ");
- %>
- </i></b></font>
+	<table width=100%">
+		<tr>
+			<td align="center"><h3>
+					<b><i>
+							<%
+								if (request.getAttribute("message") != null)
+									out.println(request.getAttribute("message"));
+								else
+									out.println(" ");
+							%>
+					</i></b>
+				</h3></td>
+		</tr>
+	</table>
 </body>
 </html>
