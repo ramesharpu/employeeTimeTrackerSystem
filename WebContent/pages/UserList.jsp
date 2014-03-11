@@ -13,7 +13,7 @@
      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
      Connection con=DriverManager.getConnection("jdbc:sqlserver://RAMESH-PC\\SQLSERVER;databaseName=db_emp_timetracker","dbuser","password");
      Statement st=con.createStatement();
-     ResultSet rs = st.executeQuery("select * from tb_users");
+     ResultSet rs = st.executeQuery("select * from tb_user");
        List li = new ArrayList();
        while(rs.next())
        {

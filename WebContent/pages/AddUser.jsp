@@ -4,13 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/employeeTimeTrackerSystem/media/css/style.css" rel="stylesheet" type="text/css" />
-<script src="/employeeTimeTrackerSystem/media/css/menu.js" type="text/javascript"></script>
-<script src="/employeeTimeTrackerSystem/media/css/formValidation.js" type="text/javascript"></script>
+<link href="/employeeTimeTrackerSystem/media/css/style.css"
+	rel="stylesheet" type="text/css" />
+<script src="/employeeTimeTrackerSystem/media/css/menu.js"
+	type="text/javascript"></script>
+<script src="/employeeTimeTrackerSystem/media/css/formValidation.js"
+	type="text/javascript"></script>
 </head>
 <body>
 	<div class="formDiv">
-		<form method="post" name="addUserForm" action="/employeeTimeTrackerSystem/AddNewUser"
+		<form method="post" name="addUserForm"
+			action="/employeeTimeTrackerSystem/AddNewUser"
 			onsubmit="return validateForm()">
 			<table style="width: 100%">
 				<tr>
@@ -20,11 +24,12 @@
 						<table class="tableProperty">
 							<tbody>
 								<tr>
-									<td colspan="3" align="center"><strong> <% if (request.getAttribute("message") != null)
-								 			out.println(request.getAttribute("message"));
- 										else
-									 		out.println(" ");
-									 %></strong></td>
+									<td colspan="3" align="center"><strong> <%
+ 	if (request.getAttribute("message") != null)
+ 		out.println(request.getAttribute("message"));
+ 	else
+ 		out.println(" ");
+ %></strong></td>
 								</tr>
 								<tr>
 									<td colspan="3" align="center"><strong>Add New
@@ -43,43 +48,49 @@
 								<tr>
 									<td style="width: 119px">Middle Name</td>
 									<td colspan="2"><input class="textBoxStyle" name="m_name"
-										type="text" placeholder="Middle Name" tabindex="3" /></td>
+										type="text" placeholder="Middle Name" tabindex="3"></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Last Name</td>
 									<td colspan="2"><input class="textBoxStyle" name="l_name"
 										type="text" placeholder="Last Name" tabindex="4" /></td>
 								</tr>
-
 								<tr>
+									<td style="width: 119px">Dashboard</td>
+									<td colspan="2"><select name="dashboard" class="dropDown"
+										tabindex="10">	
+											<option selected="selected" value="user">user</option>
+											<option value="admin">admin</option>
+									</select></td>
+								</tr>
 									<td style="width: 119px">Password</td>
 									<td colspan="2"><input class="textBoxStyle"
 										name="password" type="text" placeholder="Password"
-										tabindex="5" /></td>
+										tabindex="6" /></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Mobile Number</td>
 									<td colspan="2"><input class="textBoxStyle"
 										name="mobile_number" type="text" placeholder="Mobile Number"
-										tabindex="6" /></td>
+										tabindex="7" /></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Email id</td>
 									<td colspan="2"><input class="textBoxStyle"
 										name="email_id" type="text" placeholder="Email id"
-										tabindex="7" /></td>
+										tabindex="8" /></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Date of Birth</td>
 									<td colspan="2"><input class="textBoxStyle" name="dob"
-										type="text" placeholder="dd-mm-yyyy" tabindex="8" /></td>
+										type="text" placeholder="yyyy-mm-dd" tabindex="9" /></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Gender</td>
 									<td colspan="2"><select name="gender" class="dropDown"
-										tabindex="9">
-											<option selected="selected" value="Select">male</option>
-											<option>female</option>
+										tabindex="10">
+											<option selected="selected" value="male">male</option>
+											<option value="female">female</option>
 									</select></td>
 								</tr>
 								<tr>

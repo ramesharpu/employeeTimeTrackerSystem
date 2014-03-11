@@ -30,5 +30,9 @@ function validateForm() {
 		alert("Date of Birth cannot be blank");
 		return false;
 	}
-
+	x = document.forms["addNewProject"]["project_name"].value;
+	if (x == null || x == "") {
+		alert("Project name cannot be blank");
+		return false;
+}
 }

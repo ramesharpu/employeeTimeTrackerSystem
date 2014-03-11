@@ -51,8 +51,7 @@ if(role.equals("admin")){ %>
 						<li><a href="/employeeTimeTrackerSystem/pages/AddProject.jsp"><span>Add New Project</span></a></li>
 					</ul>
 					<ul class="two">
-						<li><a href="EditProject.jsp"><span>Edit Existing
-									Project</span></a></li>
+						<li><a href="AddUserToProject.jsp"><span>Add User To Project</span></a></li>
 					</ul>
 				</div></li>
 			<li><a href="#" class="parent"><span>Project
