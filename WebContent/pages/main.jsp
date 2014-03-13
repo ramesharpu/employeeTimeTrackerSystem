@@ -12,8 +12,7 @@
 			<td><b>&nbsp;&nbsp;&nbsp; <%String l_name = (String) session.getAttribute("l_name");out.println(l_name + " , ");%>
 					<%String f_name = (String) session.getAttribute("f_name");out.println(f_name);%>
 			</b></td>
-			<td><b>
-					<% Date date = new Date();out.print("<h4 align=\"right\">"+date.toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>");%>
+			<td><b> <% Date date = new Date();out.print("<h4 align=\"right\">"+date.toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>");%>
 			</b></td>
 		</tr>
 	</table>

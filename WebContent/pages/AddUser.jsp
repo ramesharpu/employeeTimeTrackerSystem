@@ -58,15 +58,14 @@
 								<tr>
 									<td style="width: 119px">Dashboard</td>
 									<td colspan="2"><select name="dashboard" class="dropDown"
-										tabindex="10">	
+										tabindex="10">
 											<option selected="selected" value="user">user</option>
 											<option value="admin">admin</option>
 									</select></td>
 								</tr>
-									<td style="width: 119px">Password</td>
-									<td colspan="2"><input class="textBoxStyle"
-										name="password" type="text" placeholder="Password"
-										tabindex="6" /></td>
+								<td style="width: 119px">Password</td>
+								<td colspan="2"><input class="textBoxStyle" name="password"
+									type="text" placeholder="Password" tabindex="6" /></td>
 								</tr>
 								<tr>
 									<td style="width: 119px">Mobile Number</td>

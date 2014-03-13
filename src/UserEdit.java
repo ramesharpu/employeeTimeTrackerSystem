@@ -41,6 +41,7 @@ public class UserEdit extends HttpServlet {
 		String email_id = "";
 		Date dob = null;
 		int status = 0;
+		String message = "";
 		try
 			{
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -48,9 +49,16 @@ public class UserEdit extends HttpServlet {
 		        Statement st=con.createStatement();
 		        String query = "select * from tb_user where tb_user.user_id='"+edit_user_id+"'";
 		        ResultSet rs=st.executeQuery(query);
-				while (rs.next())
+		        if (!rs.next())
 				{
-					f_name = rs.getString("f_name");
+		        	message = "User Doesnot Exist";
+					request.setAttribute("message", message);
+					request.getRequestDispatcher("pages/EditUser.jsp").forward(request, response);
+					con.close();
+				}
+		        else
+				{
+		        	f_name = rs.getString("f_name");
 					m_name = rs.getString("m_name");
 					l_name = rs.getString("l_name");
 					password = rs.getString("password");
@@ -58,18 +66,18 @@ public class UserEdit extends HttpServlet {
 					email_id = rs.getString("email");
 					dob = rs.getDate("dob");
 					status = rs.getInt("status");
+					request.setAttribute("edit_user_id",edit_user_id);
+					request.setAttribute("f_name", f_name);
+					request.setAttribute("m_name", m_name);
+					request.setAttribute("l_name", l_name);
+					request.setAttribute("password", password);
+					request.setAttribute("mobile_number", mobile_number);
+					request.setAttribute("email_id", email_id);
+					request.setAttribute("dob", dob);
+					request.setAttribute("status", status);
+					request.getRequestDispatcher("pages/EditUserDetails.jsp").forward(request, response);
+					con.close();
 				}
-				con.close();
-				request.setAttribute("edit_user_id",edit_user_id);
-				request.setAttribute("f_name", f_name);
-				request.setAttribute("m_name", m_name);
-				request.setAttribute("l_name", l_name);
-				request.setAttribute("password", password);
-				request.setAttribute("mobile_number", mobile_number);
-				request.setAttribute("email_id", email_id);
-				request.setAttribute("dob", dob);
-				request.setAttribute("status", status);
-				request.getRequestDispatcher("pages/EditUserDetails.jsp").forward(request, response);
 			}
 			catch (Exception e) 
 			{

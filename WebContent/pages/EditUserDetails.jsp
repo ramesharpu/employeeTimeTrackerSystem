@@ -20,7 +20,7 @@
 					<table class="tableProperty">
 						<tbody>
 							<tr>
-								<td colspan="3" align="center"><strong>Add New User</strong></td>
+								<td colspan="3" align="center"><strong>Edit User Details</strong></td>
 								<td><input class="textBoxStyle" type="hidden" name="edit_user_id" value=<%=request.getAttribute("edit_user_id") %>></td>
 							</tr>
 							<tr>

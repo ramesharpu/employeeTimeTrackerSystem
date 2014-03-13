@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@page import="java.sql.*"%>
-<%@page import="java.util.*"%>
+<%--     <%@page import="java.sql.*"%> --%>
+<%@page import="java.*"%>
+<%@ include file="main.jsp"%>
+<%@page import = "java.io.IOException"%>
+<%@page import = "java.sql.Connection"%>
+<%@page import = "java.sql.DriverManager"%>
+<%@page import = "java.sql.ResultSet"%>
+<%@page import = "java.sql.Statement"%>
 <%
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 Connection con=DriverManager.getConnection("jdbc:sqlserver://RAMESH-PC\\SQLSERVER;databaseName=db_emp_timetracker","dbuser","password");
