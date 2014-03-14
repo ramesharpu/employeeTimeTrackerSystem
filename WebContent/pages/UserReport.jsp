@@ -23,8 +23,6 @@ ResultSet rs = st.executeQuery("select * from tb_user");
 
   String[] userList = new String[li.size()];
   li.toArray(userList);
-  for(int i=0;i<userList.length;i++)
-  	out.println(userList[i]);
 %>
 <!DOCTYPE html>
 <html>

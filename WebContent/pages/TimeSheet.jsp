@@ -4,55 +4,76 @@
 
 <html>
 <head>
-<script type="text/javascript" charset="utf-8" src="../media/css/DataTables/media/js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../media/css/DataTables/media/js/jquery.dataTables.js"></script>
-<script src="../media/css/jquery-ui/ui/jquery-ui.js"></script>
-<script type="text/javascript" src="../media/css/timeSheet.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="/employeeTimeTrackerSystem/media/css/DataTables/media/js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="/employeeTimeTrackerSystem/media/css/DataTables/media/js/jquery.dataTables.js"></script>
+<script
+	src="/employeeTimeTrackerSystem/media/css/jquery-ui/ui/jquery-ui.js"></script>
+<script type="text/javascript"
+	src="/employeeTimeTrackerSystem/media/css/timeSheet.js"></script>
 <style type="text/css" title="currentStyle">
-@import "../media/css/DataTables/media/css/demo_table.css";
 @import
-	"../media/css/DataTables/media/css/jquery.dataTables_themeroller.css";
+	"/employeeTimeTrackerSystem/media/css/DataTables/media/css/demo_table.css"
+	;
 
-@import "../media/css/DataTables/media/css/jquery-ui-1.8.4.custom.css";
+@import
+	"/employeeTimeTrackerSystem/media/css/DataTables/media/css/jquery.dataTables_themeroller.css"
+	;
+
+@import
+	"/employeeTimeTrackerSystem/media/css/DataTables/media/css/jquery-ui-1.8.4.custom.css"
+	;
 </style>
 </head>
 <body>
-	<p />
+<h3>
+	<p align="center">
+<%
+					if (request.getAttribute("message") != null)
+						out.println(request.getAttribute("message"));
+					else
+						out.println(" ");
+				%>
+				</p></h3>
+	<table>
+		<tr>
+		<td>
+		</td></tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Add Row"
+				onclick="addRow();">
+			<td>
+			<td><a href="javascript:void(0)" id="delete">Delete selected
+					row</a></td>
+			<td>&nbsp;&nbsp;<!-- <input type="button" id="delete" value="Delete Row" onclick="delete" > -->
+				<!-- <a class="btn" href="javascript:void(0)" id="delete">Delete selected row</a>
+				<button id="delete" onclick="location.href='javascript:void(0)'">
+     test</button> -->
+			<td>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+	</table>
+	<form method="post" action="/employeeTimeTrackerSystem/TimeSheetEntry">
+		<div id="demo">
+			<table cellpadding="0" cellspacing="0" border="0" class="display"
+				id="example">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Project Name</th>
+						<th>Activity Name</th>
+						<th>Hour</th>
+						<th>Min</th>
+						<th>Comments</th>
 
-		<table>
-			<tr>
-			<td>
-				&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Add Row" onclick="addRow();">
-			<td>
-			<td><a href="javascript:void(0)" id="delete">Delete selected row</a>
-			</td>
-			<td>
-				&nbsp;&nbsp;<input type="button" value="Delete Row" onclick="javascript:void(0)" >
-			<td>
-			</tr>
-			<tr>
-				<td>
-					<br>
-				</td>
-			</tr>
-		</table>
-	<form method="post" action="TimeSheetEntry">
-	<div id="demo">
-		<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
-			<thead>
-				<tr>
-					<th>Date</th>
-					<th>Project Name</th>
-					<th>Activity Name</th>
-					<th>Hour</th>
-					<th>Min</th>
-					<th>Comments</th>
-
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="text" id="datepicker" name="datepicker[]"></td>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- <tr>
+					<td><input type="text" id="date" name="date[]" placeholder="yyyy-mm-dd"></td>
 					<td><select id="project" name="project[]">
 							<option value="p1">project-1</option>
 							<option value="p2">project-2</option>
@@ -86,19 +107,21 @@
 					<td><input type="text" name="commentbox[]"
 						placeholder="Enter your comments here" /></td>
 				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div>
-		<table>
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;&nbsp;&nbsp;<input class="button" name="Submit" type="submit" value="Submit the Time Sheet"/></td>
-		</tr>
-	</table>
-	</div>
+			 -->
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;<input class="button"
+						name="Submit" type="submit" value="Submit the Time Sheet" /></td>
+				</tr>
+			</table>
+		</div>
 	</form>
 </body>
 </html>

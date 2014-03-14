@@ -5,16 +5,27 @@ $(document).ready(function() {
 	});
 });
 
-$(function() {
+/*$(function() {
     $( "#datepicker" ).datepicker({
       showButtonPanel: true,
       });
-  });
+  });*/
 /* Global variable for the DataTables object */
 var oTable;
-var datepicker = "<input type=\"text\" id=\"datepicker\" name=\"datepicker[]\">";
-var project = "<select id = \"project\" name=\"project[]\" > <option value=\"p1\">project-1</option><option value=\"p1\">project-2</option>";
-var activity = "<select name=\"activity[]\"><option value=\"dev\">development</option><option value=\"test\">testing</option><option value=\"bugfix\">bugfix</option>";
+var datepicker = "<input type=\"text\" id=\"date\" name=\"date[]\" placeholder=\"yyyy-mm-dd\">";
+var project = "<select id = \"project\" name=\"project[]\" > " +
+		"<option value=\"1\">project-1</option>" +
+		"<option value=\"2\">project-2</option>" +
+		"<option value=\"3\">project-3</option>" +
+		"<option value=\"4\">project-4</option>";
+var activity = "<select name=\"activity[]\">" +
+		"<option value=\"1\">Development</option>" +
+		"<option value=\"2\">Testing</option>" +
+		"<option value=\"3\">Bug Fix</option>"+
+		"<option value=\"4\">Bug Verification</option>"+
+		"<option value=\"5\">Automation</option>"+
+		"<option value=\"6\">Support</option>"+
+		"<option value=\"7\">Training</option>";
 var hour = "<select name=\"hour[]\">" + "<option value=\"1\">1</option>"
 		+ "<option value=\"2\">2</option>" + "<option value=\"3\">3</option>"
 		+ "<option value=\"4\">4</option>" + "<option value=\"5\">5</option>"
@@ -27,7 +38,7 @@ var min = "<select name=\"min[]\">" + "<option value=\"00\">0</option>"
 		+ "<option value=\"15\">15</option>"
 		+ "<option value=\"30\">30</option>"
 		+ "<option value=\"45\">45</option>" + "</select>";
-var comment = "<input type=\"text\" name=\"commentbox[]\" placeholder=\"Enter your comments here\" />";
+var comment = "<input type=\"text\" name=\"comment[]\" placeholder=\"Enter your comments here\" />";
 $(document).ready(function() {
 	oTable = $('#example').dataTable();
 });
